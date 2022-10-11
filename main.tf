@@ -5,7 +5,7 @@ resource "github_repository" "ludum-dare-51" {
   visibility = "public"
 
   template {
-    owner      = "github"
+    owner      = "opheliah95"
     repository = "godot-3d-template"
   }
 }
