@@ -8,4 +8,6 @@ resource "github_repository" "ludum-dare-51" {
     owner      = "opheliah95"
     repository = "godot-3d-template"
   }
+
+  archive_on_destroy =  true # when deleted it will be archived
 }
