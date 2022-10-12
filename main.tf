@@ -11,3 +11,12 @@ resource "github_repository" "ludum-dare-51" {
 
   archive_on_destroy =  true # when deleted it will be archived
 }
+
+resource "github_repository" "tensorflow-starter" {
+  name        = "tensorflow-starter"
+  description = "tensorflow beginner project"
+
+  visibility = "public"
+
+  archive_on_destroy =  true # when deleted it will be archived
+}
