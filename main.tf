@@ -20,3 +20,18 @@ resource "github_repository" "tensorflow-starter" {
 
   archive_on_destroy =  true # when deleted it will be archived
 }
+
+resource "github_repository" "tensorflow-covid-analysis" {
+  name        = "tensorflow-covid-data-analysis"
+  description = "private data analysis project"
+
+  visibility = "private"
+
+  archive_on_destroy =  true # when deleted it will be archived
+
+  # templating from an existing project
+   template {
+    owner      = "opheliah95"
+    repository = "tensorflow-starter"
+  }
+}
