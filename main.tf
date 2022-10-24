@@ -9,7 +9,7 @@ resource "github_repository" "ludum-dare-51" {
     repository = "godot-3d-template"
   }
 
-  archive_on_destroy =  true # when deleted it will be archived
+  archive_on_destroy = true # when deleted it will be archived
 }
 
 resource "github_repository" "tensorflow-starter" {
@@ -18,7 +18,9 @@ resource "github_repository" "tensorflow-starter" {
 
   visibility = "public"
 
-  archive_on_destroy =  true # when deleted it will be archived
+  is_template = "true"
+
+  archive_on_destroy = true # when deleted it will be archived
 }
 
 resource "github_repository" "tensorflow-covid-analysis" {
@@ -27,10 +29,10 @@ resource "github_repository" "tensorflow-covid-analysis" {
 
   visibility = "private"
 
-  archive_on_destroy =  true # when deleted it will be archived
+  archive_on_destroy = true # when deleted it will be archived
 
   # templating from an existing project
-   template {
+  template {
     owner      = "opheliah95"
     repository = "tensorflow-starter"
   }
